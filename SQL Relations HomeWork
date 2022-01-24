@@ -1,0 +1,49 @@
+-- CREATE DATABASE LibraryDb
+
+-- USE LibraryDb
+
+-- CREATE TABLE Genres(
+--     Id int PRIMARY KEY IDENTITY,
+--     GenreName NVARCHAR(50) NOT NULL,
+-- )
+
+-- CREATE TABlE Authors(
+--     Id int PRIMARY KEY IDENTITY,
+--     Name NVARCHAR(50) NOT NULL,
+--     Surname NVARCHAR(50),
+-- )
+
+-- Create TABLE Books(
+--     Id int PRIMARY KEY IDENTITY,
+--     BookName NVARCHAR(50) NOT NULL,
+--     Price FLOAT,
+--     AuthorId int REFERENCES Authors(ID)
+-- )
+-- Create TABLE Customers(
+--     Id int PRIMARY KEY IDENTITY,
+--     CustomerName NVARCHAR(50) NOT NULL,
+--     CustomerSurname NVARCHAR(50),
+-- )
+
+-- Create TABLE BookGenres(
+--     Id INT PRIMARY key IDENTITY,
+--     GenreId int REFERENCES Genres(Id),
+--     BookId int REFERENCES Books(Id),
+-- )
+
+-- CREATE TABLE AuthorGenre(
+--     Id int PRIMARY key IDENTITY,
+--     AuthorId int REFERENCES Authors(Id),
+--     GenreId int REFERENCES Genres(Id),
+-- )
+
+-- CREATE TABLE Orders(
+--     Id int PRIMARY key IDENTITY,
+--     BookId int REFERENCES Books(Id),
+--     CustomerId int REFERENCES Customers(Id),
+--     BuyAt DATE,
+--     ReturnAt DATE,
+-- )
+
+-- SELECT * FROM Books
+
