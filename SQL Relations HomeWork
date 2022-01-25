@@ -13,12 +13,13 @@
 --     Surname NVARCHAR(50),
 -- )
 
--- Create TABLE Books(
+-- CREATE TABLE Books(
 --     Id int PRIMARY KEY IDENTITY,
 --     BookName NVARCHAR(50) NOT NULL,
 --     Price FLOAT,
 --     AuthorId int REFERENCES Authors(ID)
 -- )
+-- DROP TABLE Books
 -- Create TABLE Customers(
 --     Id int PRIMARY KEY IDENTITY,
 --     CustomerName NVARCHAR(50) NOT NULL,
@@ -47,3 +48,65 @@
 
 -- SELECT * FROM Books
 
+-- SELECT * FROM Authors
+-- SELECT * FROM Books
+-- INSERT INTO Books
+-- VALUES ('Empati',100,2)
+
+-- SELECT * FROM BookGenres
+-- INNER JOIN Books,Genres
+-- ON 
+
+-- SELECT * FROM BookGenres
+
+
+
+-- INSERT INTO Customers
+-- VALUES ('Sanan','Mn')
+
+-- INSERT INTO Genres
+-- VALUES ('Love Story')
+
+
+
+-- HANSI MUELLIFIN HANSI KITABLARI VAR
+-- SELECT Books.Id,BookName,Price,Authors.Name,Authors.Surname FROM Books
+-- INNER JOIN Authors
+-- ON Books.AuthorId = Authors.Id
+
+
+
+--Hansi kitab hani janrdadi
+-- SELECT BookGenres.Id,Books.BookName,Price,Genres.GenreName FROM BookGenres
+-- INNER JOIN Books
+-- ON BookGenres.BookId = Books.Id
+-- INNER JOIN Genres
+-- ON BookGenres.GenreId = Genres.Id
+
+-- select * FROM BookGenres
+-- INSERT INTO BookGenres
+-- VALUES (1,2)
+
+
+
+--Hansi author hansi janrlarda yazir
+-- SELECT Authors.Id,Name,Surname,Genres.GenreName FROM AuthorGenre
+-- INNER JOIN Authors
+-- ON AuthorGenre.AuthorId = Authors.Id
+-- INNER JOIN Genres
+-- ON AuthorGenre.GenreId = Genres.Id
+
+-- INSERT INTO AuthorGenre
+-- VALUES (1,1)
+
+
+
+--Hansi customer hansi kitablari oxuyub
+-- SELECT CustomerName,BookName,BuyAt,ReturnAt,Orders.Id FROM Orders
+-- INNER JOIN Customers
+-- on Orders.CustomerId = Customers.Id
+-- INNER JOIN Books
+-- ON Orders.BookId = Books.Id
+
+-- insert into Orders (BookId,CustomerId)
+-- VALUES(2,1)
